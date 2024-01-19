@@ -12,13 +12,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/suhane79jaya/BookLibrary.git"
+    "url": "git+https://github.com/suhane79jaya/mern-books-deploy.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/suhane79jaya/BookLibrary/issues"
+    "url": "https://github.com/suhane79jaya/mern-books-deploy/issues"
   },
-  "homepage": "https://github.com/suhane79jaya/BookLibrary#readme"
+  "homepage": "https://github.com/suhane79jaya/mern-books-deploy#readme"
 }
