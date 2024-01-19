@@ -1,0 +1,24 @@
+{
+  "name": "book-store-mern-stack-main",
+  "version": "1.0.0",
+  "description": "This repository contains a book library built using MERN Stack.Please follow the instruction to set it up.",
+  "main": "index.js",
+  "scripts": {
+    "install-backend": "cd backend && npm install",
+    "start-backend": "cd backend && npm start",
+    "install-frontend": "cd frontend && npm install",
+    "build-frontend": "cd frontend && npm run build",
+    "start-frontend": "cd frontend && npm run dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suhane79jaya/BookLibrary.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/suhane79jaya/BookLibrary/issues"
+  },
+  "homepage": "https://github.com/suhane79jaya/BookLibrary#readme"
+}
