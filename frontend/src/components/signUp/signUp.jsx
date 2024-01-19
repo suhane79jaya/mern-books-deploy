@@ -10,7 +10,11 @@ const SignUp = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:5000/register", { name, email, password })
+      .post("https://mern-books-library-backend.onrender.com/register", {
+        name,
+        email,
+        password,
+      })
       .then((res) => {
         console.log("signup res", res);
         navigate("/login");

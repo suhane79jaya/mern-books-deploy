@@ -6,7 +6,7 @@ const Logout = () => {
   axios.defaults.withCredentials = false;
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/logout`)
+      .get(`https://mern-books-library-backend.onrender.com/logout`)
       .then((res) => {
         if (res.data.status === 200) {
           if (res.data.role === "admin" || res.data.role === "visitor")
