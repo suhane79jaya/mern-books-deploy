@@ -25,7 +25,7 @@ app.use(cookieParser());
 
 app.get("/", cors(), (request, response) => {
   console.log(request);
-  return response.status(234).send("Welcome To MERN Stack Tutorial");
+  return response.status(234).json({"message":"Welcome To MERN Stack Tutorial"});
 });
 
 app.use("/books", cors(), booksRoute);
