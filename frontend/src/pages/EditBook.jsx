@@ -20,7 +20,7 @@ const EditBook = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`http://localhost:5000/books/${id}`)
+      .get(`https://mern-books-library-backend.onrender.com/books/${id}`)
       .then((response) => {
         setImage(response.data.image);
         setTitle(response.data.title);
