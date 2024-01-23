@@ -1,10 +1,12 @@
 import { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
+import { useSnackbar } from "notistack";
 const Login = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
+  const { enqueueSnackbar } = useSnackbar();
   axios.defaults.withCredentials = false;
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -15,7 +17,8 @@ const Login = () => {
       })
       .then((res) => {
         console.log("login data", res.data);
-        alert("login Successfully");
+        //alert("login Successfully");
+        enqueueSnackbar("Login Successfully", { variant: "success" });
         window.localStorage.setItem("token", res.data);
 
         if (res.data.status === "Success") {
@@ -30,9 +33,11 @@ const Login = () => {
           navigate("/");
         }
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        enqueueSnackbar("Error", { variant: "error" });
+        console.log(err);
+      });
   };
-
   return (
     <>
       <div className="flex flex-col w-full max-w-md px-k4 py-18 bg-white rounded-lg shadow dark:bg-gray-800 sm:px-6 md:px-8 lg:px-10">

@@ -8,14 +8,16 @@ const Logout = () => {
     axios
       .get(`https://mern-books-library-backend.onrender.com/logout`)
       .then((res) => {
-        if (res.data.status === 200) {
-          if (res.data.role === "admin" || res.data.role === "visitor")
+        if (res.data.status === "Success") {
+          if (res.data.role === "admin" || res.data.role === "visitor") {
             window.localStorage.clear();
-
-          alert("logout Successfully");
-          navigate("/");
+            navigate("/");
+          } else {
+            alert("user found,you are login ");
+            navigate("/Home");
+          }
         } else {
-          alert("user found,you are login ");
+          navigate("/");
         }
       })
       .catch((err) => {

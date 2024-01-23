@@ -1,11 +1,13 @@
 import { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
+import { useSnackbar } from "notistack";
 const SignUp = () => {
   const [name, setName] = useState();
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
   const navigate = useNavigate();
+  const { enqueueSnackbar } = useSnackbar();
   axios.defaults.withCredentials = false;
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -17,9 +19,16 @@ const SignUp = () => {
       })
       .then((res) => {
         console.log("signup res", res);
-        navigate("/login");
+        enqueueSnackbar(
+          "Signup successfully,now login with the same signup details",
+          { variant: "success" }
+        );
+        navigate("/");
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        enqueueSnackbar("Error", { variant: "error" });
+        console.log(err);
+      });
   };
   return (
     <>
