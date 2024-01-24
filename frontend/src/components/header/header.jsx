@@ -38,7 +38,7 @@ const Header = () => {
                   label="Dashboard"
                   onClick={() => setTab("/dashboard")}
                 ></Tab>
-                <Tab LinkComponent={NavLink} to="/" label="Home" />
+                <Tab LinkComponent={NavLink} to="/Home" label="Home" />
                 <Tab
                   LinkComponent={NavLink}
                   to="/books/create"
