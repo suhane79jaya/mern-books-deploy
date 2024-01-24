@@ -12,13 +12,13 @@ This repository contains a book library built using MERN Stack.Please follow the
    with view edit and remove functionality.
 6. Card view provides cards of books with title and author with the view,edit and remove functionality.
 
-[Working Demo] ()
+[Working Demo] (https://booklibrary-mern.netlify.app/)
 
 ### Instructions###
 
 ---
 
 1. Clone the repo & run `npm install`.
-2. From the app(backend & Frontend) Folder run `npm run dev`.
+2. From the app(backend & Frontend) Folder run `npm start`&`npm run dev`.
 
 # mern-book-store
