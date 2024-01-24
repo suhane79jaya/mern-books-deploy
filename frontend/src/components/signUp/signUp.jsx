@@ -2,6 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import { useSnackbar } from "notistack";
+import lib from "/LibraryImages/lib1.webp";
 const SignUp = () => {
   const [name, setName] = useState();
   const [email, setEmail] = useState();
@@ -32,7 +33,8 @@ const SignUp = () => {
   };
   return (
     <>
-      <div className="flex flex-col max-w-md px-4 py-8 bg-white rounded-lg shadow dark:bg-gray-800 sm:px-6 md:px-8 lg:px-10">
+      <div className="flex flex-col max-w-md mx-80 my-28 px-4 py-8 bg-white rounded-lg shadow dark:bg-gray-800 sm:px-6 md:px-8 lg:px-10">
+        <img src={lib} alt="libraryImage"></img>
         <div className="self-center mb-2 text-xl font-light text-gray-800 sm:text-2xl dark:text-white">
           Create a new account
         </div>

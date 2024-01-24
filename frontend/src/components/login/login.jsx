@@ -2,6 +2,8 @@ import { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import { useSnackbar } from "notistack";
+import lib from "/LibraryImages/lib1.webp";
+
 const Login = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState();
@@ -40,15 +42,17 @@ const Login = () => {
   };
   return (
     <>
-      <div className="flex flex-col w-full max-w-md px-k4 py-18 bg-white rounded-lg shadow dark:bg-gray-800 sm:px-6 md:px-8 lg:px-10">
-        <div className="self-center mb-6 text-xl font-light text-gray-600 sm:text-2xl dark:text-white">
+      <div className="flex flex-col w-full max-w-md mx-80 my-40 px-k4 py-18 bg-white rounded-lg shadow dark:bg-gray-800 pt-100 sm:px-6 md:px-8 lg:px-10">
+        <img src={lib} alt="libraryImage"></img>
+        <div className="self-center text-xl font-light text-gray-600 sm:text-2xl dark:text-white">
           Login To Your Account
         </div>
+
         <div className="mt-8">
           <form onSubmit={handleSubmit}>
             <div className="flex flex-col mb-2">
               <div className="flex relative ">
-                <span className="rounded-l-md inline-flex  items-center px-3 border-t bg-white border-l border-b  border-gray-300 text-gray-500 shadow-sm text-sm">
+                <span className="rounded-l-md inline-flex items-center px-3 border-t bg-white border-l border-b  border-gray-300 text-gray-500 shadow-sm text-sm">
                   <svg
                     width="15"
                     height="15"

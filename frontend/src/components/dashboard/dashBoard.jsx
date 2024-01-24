@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { API_URL } from "../../api/API";
+
 //const API_URI = `https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=${process.env.REACT_APP_API_URI_KEY}`;
 const DashBoard = () => {
   const [suc, setSuc] = useState();
@@ -10,8 +11,7 @@ const DashBoard = () => {
   axios.defaults.withCredentials = false;
   const [books, setBooks] = useState([]);
   console.log("dashboard Books", books);
-  //let x = `$(process.env.REACT_APP_API_URL)`;
-  //console.log("X", x);
+
   useEffect(() => {
     axios
       .get(API_URL)

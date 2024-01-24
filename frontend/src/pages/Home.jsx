@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Spinner from "../components/Spinner";
 import { Link } from "react-router-dom";
-//import Header from "../components/header/header";
 
 import { MdOutlineAddBox } from "react-icons/md";
 import BooksTable from "../components/home/BooksTable";

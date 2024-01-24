@@ -16,12 +16,14 @@ const App = () => {
     <>
       <Header />
       <Routes>
+        <Route path="/" element={<Login />} />
         <Route path="/register" element={<SignUp />}></Route>
+
         <Route path="/Home" element={<Home />}></Route>
 
         <Route path="/dashboard" element={<DashBoard />}></Route>
         <Route path="/bookShelf" element={<Posts />}></Route>
-        <Route path="/" element={<Login />} />
+
         <Route path="/logout" element={<Logout />} />
         <Route path="/books/create" element={<CreateBook />} />
         <Route path="/books/details/:id" element={<ShowBook />} />
