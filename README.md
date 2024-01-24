@@ -21,4 +21,4 @@ This repository contains a book library built using MERN Stack.Please follow the
 1. Clone the repo & run `npm install`.
 2. From the app(backend & Frontend) Folder run `npm start`&`npm run dev`.
 
-# mern-book-store
+# mern-books-deploy
